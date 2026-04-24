@@ -896,19 +896,32 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 7px;
-  padding: 14px 14px 0;
+  padding: 14px 12px 0;
 }
 
 .hs-icon {
   aspect-ratio: 1;
   border-radius: 9px;
   background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hs-icon-active {
-  background: rgba(109,40,217,0.35);
-  border: 1px solid rgba(109,40,217,0.45);
+.hs-icon svg {
+  width: 55%;
+  height: 55%;
 }
+
+/* Brand colors */
+.hs-youtube   { background: #FF0000; }
+.hs-instagram { background: radial-gradient(circle at 30% 110%, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.hs-snapchat  { background: #FFFC00; }
+.hs-slack     { background: #4A154B; }
+.hs-github    { background: #24292E; }
+.hs-messages  { background: linear-gradient(160deg, #5AC85A 0%, #34C759 100%); }
+.hs-lovelet   { background: linear-gradient(135deg, #6D28D9 0%, #A78BFA 100%); box-shadow: 0 0 10px rgba(109,40,217,0.5); }
+.hs-photos    { background: linear-gradient(135deg, #FF6B6B 0%, #FFA500 50%, #FFD700 100%); }
 
 .fishhook {
   pointer-events: none;
