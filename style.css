@@ -2418,8 +2418,12 @@ footer {
   .hero-sub         { margin-left: auto; margin-right: auto; }
   .sticker-badge    { margin-left: auto; margin-right: auto; }
 
-  .hero-phones      { gap: 8px; }
-  .iphone-sm        { width: 150px; height: 308px; }
+  .hero-phones      { gap: 6px; }
+  /* Phones scale down to fit any screen width — both always visible */
+  .iphone-sm {
+    width: min(143px, calc((100vw - 40px - 44px) / 2));
+    height: min(293px, calc((100vw - 40px - 44px) / 2 * 2.05));
+  }
   .phones-bridge    { padding-bottom: 40px; }
   .hp-label         { font-size: 9px; }
   .hs-time          { font-size: 24px; padding: 26px 0 8px; }
@@ -2511,27 +2515,17 @@ footer {
 
 /* ═══════════════════════════════════════════
    RESPONSIVE — SMALL PHONE (≤ 480px)
-   Single phone display — cleaner on narrow screens
    ═══════════════════════════════════════════ */
 @media (max-width: 480px) {
-  .hp-send, .phones-bridge { display: none; }
-  .hero-phones    { justify-content: center; }
-  .iphone-sm      { width: 200px; height: 410px; }
-
-  /* Restore full-size inner phone UI (768px shrinks these) */
-  .hs-time        { font-size: 32px; padding: 34px 0 10px; }
-  .sui-topbar     { padding: 36px 12px 10px; }
-  .sui-photo-wrap { margin: 0 10px; border-radius: 14px; }
-  .sui-footer     { padding: 8px 10px 10px; }
-  .hs-widget      { margin: 0 10px; }
+  /* Hide "instantly" label — too small to read, saves horizontal space */
+  .pb-label { display: none; }
 }
 
 /* ═══════════════════════════════════════════
    RESPONSIVE — SMALL MOBILE (≤ 400px)
    ═══════════════════════════════════════════ */
 @media (max-width: 400px) {
-  .iphone-sm      { width: 175px; height: 358px; }
-  .hs-time        { font-size: 28px; padding: 30px 0 8px; }
+  /* iphone-sm width handled automatically by min() calc in 768px block */
   .widget-float   { display: none; }
   .hero-headline  { font-size: 40px; }
   .feat-large     { min-height: 300px; }
@@ -2541,8 +2535,7 @@ footer {
    RESPONSIVE — TINY MOBILE (≤ 360px)
    ═══════════════════════════════════════════ */
 @media (max-width: 360px) {
-  .iphone-sm      { width: 155px; height: 317px; }
-  .hs-time        { font-size: 22px; padding: 22px 0 6px; }
+  /* iphone-sm width handled automatically by min() calc in 768px block */
   .hero-headline  { font-size: 34px; }
   .nav-cta        { padding: 8px 12px; font-size: 12px; }
   .hero-sub       { font-size: 15px; }
