@@ -84,9 +84,9 @@
           </h1>
 
           <p class="hero-sub reveal">
-            LoveLet puts your person right on your home screen.
-            one selfie. one message. zero drama.
-            not an app you check — an app that checks on them.
+            she takes a photo of her morning coffee. hits send.
+            it's on his home screen — before he even opens instagram.
+            no notifications buried. no feeds. just her, right there.
           </p>
 
           <div class="hero-tags reveal" role="list">
@@ -105,80 +105,89 @@
           </div>
         </div>
 
-        <!-- iPhone mockup -->
+        <!-- Two iPhones: send → receive -->
         <div class="hero-phone-col">
-          <!-- Proper fishhook annotation arrow -->
-          <svg class="fishhook fishhook-hero" viewBox="0 0 120 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path class="fh-path"
-              d="M 14 20 C 14 20, 40 8, 62 22 C 82 35, 88 60, 84 85"
-              stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-            <!-- Fishhook arrowhead — follows the tangent of the path end -->
-            <path d="M 74 80 L 84 85 L 92 77" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <text x="4" y="16" fill="#6D28D9" font-size="8.5" font-family="DM Sans" font-style="italic">the widget lives here</text>
-          </svg>
+          <div class="hero-phones" aria-label="LoveLet send and receive flow">
 
-          <div class="iphone-wrap" aria-label="iPhone app mockup">
-            <div class="iphone">
-              <div class="iphone-notch" aria-hidden="true">
-                <div class="notch-camera"></div>
-              </div>
-              <div class="iphone-screen">
-                <div class="app-ui">
-                  <div class="app-topbar">
-                    <span class="app-title">Latest Moment</span>
-                    <div class="app-avatar-pill hover-target"><span>A</span></div>
-                  </div>
-                  <div class="moment-card">
-                    <div class="moment-bg">
+            <!-- GF's phone — sending -->
+            <div class="hp-wrap hp-send">
+              <span class="hp-label">priya sends</span>
+              <div class="iphone iphone-sm">
+                <div class="iphone-notch" aria-hidden="true"><div class="notch-camera"></div></div>
+                <div class="iphone-screen">
+                  <div class="send-ui">
+                    <div class="sui-topbar">
+                      <span class="sui-title">new moment</span>
+                    </div>
+                    <div class="sui-photo-wrap">
                       <img
-                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&h=480&q=80"
-                        alt="Black coffee in a cafe"
-                        class="moment-photo"
+                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&h=500&q=80"
+                        alt="Coffee in a cafe"
+                        class="sui-photo"
                         loading="eager"
-                        onerror="this.parentElement.style.background='linear-gradient(135deg,#3B2314 0%,#1A0F0A 100%)'"
+                        onerror="this.parentElement.style.background='#3B2314'"
                       />
+                      <div class="sui-photo-overlay"></div>
                     </div>
-                    <div class="moment-overlay"></div>
-                    <div class="moment-meta">
-                      <span class="moment-from">from priya</span>
-                      <span class="moment-msg">"Missing you"</span>
+                    <div class="sui-footer">
+                      <div class="sui-caption-row">
+                        <span class="sui-caption-text">"Missing you"</span>
+                      </div>
+                      <div class="sui-send-btn" aria-hidden="true">send ✦</div>
                     </div>
-                    <div class="moment-time">2 mins ago</div>
                   </div>
-                  <button class="app-share hover-target" aria-label="Share a moment">
-                    ✦ &nbsp;share a moment
-                  </button>
                 </div>
+                <div class="iphone-home-indicator" aria-hidden="true"></div>
               </div>
-              <div class="iphone-home-indicator" aria-hidden="true"></div>
             </div>
 
-            <div class="widget-float" aria-label="Home screen widget preview">
-              <div class="widget-header">
-                <div class="widget-thumb">
-                  <img
-                    src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=60&h=60&q=80"
-                    alt=""
-                    class="widget-thumb-photo"
-                    loading="eager"
-                    onerror="this.style.display='none'"
-                  />
-                </div>
-                <div class="widget-copy">
-                  <span class="widget-name">priya</span>
-                  <span class="widget-caption">Missing you</span>
-                </div>
-              </div>
-              <div class="widget-footer">Partner Moment · widget</div>
+            <!-- Bridge arrow -->
+            <div class="phones-bridge" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M 4 16 L 26 16 M 18 8 L 26 16 L 18 24" stroke="#6D28D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="pb-label">instantly</span>
             </div>
-          </div>
 
-          <div class="hero-phone-note reveal" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2 L10 18 M5 13 L10 18 L15 13" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>lives on their actual home screen</span>
+            <!-- BF's phone — home screen with widget -->
+            <div class="hp-wrap hp-recv">
+              <span class="hp-label">dev's screen</span>
+              <div class="iphone iphone-sm">
+                <div class="iphone-notch" aria-hidden="true"><div class="notch-camera"></div></div>
+                <div class="iphone-screen">
+                  <div class="homescreen-ui">
+                    <div class="hs-time">9:41</div>
+                    <div class="hs-widget">
+                      <div class="hs-widget-photo-wrap">
+                        <img
+                          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&h=130&q=80"
+                          alt=""
+                          class="hs-widget-photo"
+                          loading="eager"
+                          onerror="this.parentElement.style.background='#3B2314'"
+                        />
+                      </div>
+                      <div class="hs-widget-info">
+                        <span class="hs-app-name">LoveLet</span>
+                        <span class="hs-from">from priya · just now</span>
+                        <span class="hs-msg">"Missing you"</span>
+                      </div>
+                    </div>
+                    <div class="hs-app-grid" aria-hidden="true">
+                      <div class="hs-icon"></div><div class="hs-icon"></div>
+                      <div class="hs-icon"></div><div class="hs-icon"></div>
+                      <div class="hs-icon"></div><div class="hs-icon hs-icon-active"></div>
+                      <div class="hs-icon"></div><div class="hs-icon"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="iphone-home-indicator" aria-hidden="true"></div>
+              </div>
+              <div class="recv-badge">✦ on his home screen</div>
+            </div>
+
           </div>
+        </div>
         </div>
       </div>
 
@@ -222,7 +231,7 @@
           not another texting app.<br />something actually different.
         </h2>
         <p class="section-sub reveal">
-          most apps want your attention. LoveLet gives it back — to the one person who actually deserves it.
+          every other app competes for their attention. LoveLet makes sure you're the first thing they see — literally.
         </p>
       </div>
 
@@ -305,15 +314,6 @@
 
       </div>
 
-      <!-- Connector fishhook between editorial panels and next section -->
-      <div class="what-footer-arrow" aria-hidden="true">
-        <svg class="fishhook" viewBox="0 0 160 50" fill="none">
-          <path class="fh-path"
-            d="M 20 40 C 20 40, 60 15, 80 25 C 100 35, 140 20, 150 15"
-            stroke="rgba(109,40,217,0.25)" stroke-width="2" stroke-linecap="round"/>
-          <path d="M 141 9 L 150 15 L 143 22" stroke="rgba(109,40,217,0.25)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
     </section>
 
     <!-- HOW IT WORKS -->
@@ -332,8 +332,7 @@
             <div class="step-right">
               <h3 class="step-name">pair up</h3>
               <p class="step-desc">
-                one of you generates an invite code. the other enters it. boom — you're linked.
-                strictly 1:1. this isn't that kind of app.
+                one of you creates an invite code. the other enters it. linked. 1:1 forever. nobody else gets in.
               </p>
             </div>
             <!-- S-curve fishhook — pronounced curves -->
@@ -352,8 +351,7 @@
             <div class="step-right">
               <h3 class="step-name">add the widget</h3>
               <p class="step-desc">
-                long-press home screen → tap "+" → search LoveLet → done.
-                their moments now live right there. every time you unlock your phone.
+                long-press home screen → + → search LoveLet → add. their photos live on your screen. every time you unlock.
               </p>
             </div>
             <!-- Reverse S-curve -->
@@ -370,10 +368,10 @@
               <span class="step-num" aria-hidden="true">03</span>
             </div>
             <div class="step-right">
-              <h3 class="step-name">send moments</h3>
+              <h3 class="step-name">send a moment</h3>
               <p class="step-desc">
-                tap share. take a selfie. write something real (or unhinged — seriously no judgment).
-                hit send. they feel things. repeat daily.
+                see something. snap it. write one line. hit send.
+                it's on their screen before they even notice a notification. repeat whenever.
               </p>
             </div>
           </div>
@@ -415,15 +413,12 @@
 
         <div class="bento-grid">
 
-          <!-- Card 1: Quote on couple photo (Marcus) -->
+          <!-- Card 1: Quote on aesthetic photo (Marcus) -->
           <div class="bento-card bento-photo-quote reveal hover-target" role="article">
             <div class="bpq-img-wrap">
-              <!--
-                Indian couple (fair). Replace with a verified photo.
-              -->
               <img
-                src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&h=700&q=80"
-                alt="Happy Indian couple"
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Latte coffee art"
                 loading="lazy"
                 class="bpq-img"
                 onerror="this.parentElement.classList.add('bpq-fb-1')"
@@ -444,14 +439,11 @@
             </div>
           </div>
 
-          <!-- Card 2: Couple photo (tall, spans 2 rows) -->
-          <div class="bento-card bento-photo-tall reveal" role="img" aria-label="Couple together">
-            <!--
-              Caucasian / Russian couple. Replace with a verified photo.
-            -->
+          <!-- Card 2: Romantic aesthetic photo (tall, spans 2 rows) -->
+          <div class="bento-card bento-photo-tall reveal" role="img" aria-label="Romantic moment">
             <img
-              src="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?auto=format&fit=crop&w=600&h=900&q=80"
-              alt="Happy couple smiling"
+              src="https://images.unsplash.com/photo-1490750967868-88df5691cc4d?auto=format&fit=crop&w=600&h=900&q=80"
+              alt="Pink roses"
               loading="lazy"
               class="bpt-img"
               onerror="this.classList.add('img-fb-hidden');this.parentElement.classList.add('bpt-fb-1')"
@@ -490,15 +482,12 @@
             </div>
           </div>
 
-          <!-- Card 4: Quote on couple photo (Sofía) -->
+          <!-- Card 4: Quote on aesthetic photo (Sofía) -->
           <div class="bento-card bento-photo-quote reveal hover-target" role="article">
             <div class="bpq-img-wrap">
-              <!--
-                Spanish couple. Replace with a verified photo.
-              -->
               <img
-                src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=600&h=700&q=80"
-                alt="Happy couple outdoors"
+                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Warm coffee at a cafe"
                 loading="lazy"
                 class="bpq-img"
                 onerror="this.parentElement.classList.add('bpq-fb-2')"
@@ -519,28 +508,33 @@
             </div>
           </div>
 
-          <!-- Card 5: Feature chips -->
-          <div class="bento-card bento-features reveal" role="article">
-            <h3 class="features-title">what you actually get</h3>
-            <div class="feature-chips" role="list">
-              <span class="fchip" role="listitem">widget-first</span>
-              <span class="fchip" role="listitem">no ads. ever.</span>
-              <span class="fchip" role="listitem">no algorithm</span>
-              <span class="fchip" role="listitem">works offline</span>
-              <span class="fchip" role="listitem">1:1 only</span>
-              <span class="fchip" role="listitem">always fresh</span>
+          <!-- Card 5: Moment demo — what a sent moment looks like -->
+          <div class="bento-card bento-moment-demo reveal" role="article" aria-label="A sent moment preview">
+            <div class="bmd-photo-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&h=700&q=80"
+                alt="Coffee moment sent"
+                class="bmd-photo"
+                loading="lazy"
+                onerror="this.parentElement.style.background='#3B2314'"
+              />
+              <div class="bmd-gradient"></div>
             </div>
-            <p class="features-sub">just the two of you. nothing else.</p>
+            <div class="bmd-content">
+              <div class="bmd-header">
+                <span class="bmd-app">LoveLet</span>
+                <span class="bmd-badge">just sent</span>
+              </div>
+              <p class="bmd-caption">"Missing you"</p>
+              <span class="bmd-from">priya → dev's home screen</span>
+            </div>
           </div>
 
-          <!-- Card 6: Couple photo -->
-          <div class="bento-card bento-photo-tall reveal" role="img" aria-label="Couple sharing a moment">
-            <!--
-              Another diverse couple (Russian / Caucasian). Replace with a verified photo.
-            -->
+          <!-- Card 6: Romantic aesthetic photo (wide) -->
+          <div class="bento-card bento-photo-tall reveal" role="img" aria-label="Romantic moment">
             <img
-              src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?auto=format&fit=crop&w=600&h=700&q=80"
-              alt="Couple looking happy together"
+              src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&h=700&q=80"
+              alt="Golden hour sunrise"
               loading="lazy"
               class="bpt-img"
               onerror="this.classList.add('img-fb-hidden');this.parentElement.classList.add('bpt-fb-2')"
@@ -549,15 +543,12 @@
             <div class="card-cloud card-cloud-3" aria-hidden="true"></div>
           </div>
 
-          <!-- Card 7: Full-width highlight with couple photo bg -->
+          <!-- Card 7: Full-width highlight with aesthetic photo bg -->
           <div class="bento-card bento-highlight reveal hover-target" role="article">
             <div class="bhl-img-wrap">
-              <!--
-                Wide couple photo for the highlight card.
-              -->
               <img
-                src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1400&h=400&q=80"
-                alt="Happy couple"
+                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&h=400&q=80"
+                alt="Colourful Italian street"
                 loading="lazy"
                 class="bhl-img"
                 onerror="this.parentElement.classList.add('bhl-fb')"

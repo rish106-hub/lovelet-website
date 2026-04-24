@@ -536,7 +536,7 @@ body {
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
   align-items: center;
   width: 100%;
 }
@@ -667,7 +667,247 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
+}
+
+/* Two-phone hero layout */
+.hero-phones {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  justify-content: center;
+}
+
+.hp-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hp-send {
+  animation: phone-float 5s ease-in-out infinite;
+  transform: rotate(-2deg);
+}
+
+.hp-recv {
+  animation: phone-float 5s ease-in-out infinite 0.8s;
+  transform: rotate(2deg);
+}
+
+.hp-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(15,10,26,0.4);
+  background: rgba(109,40,217,0.08);
+  border: 1px solid rgba(109,40,217,0.12);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.iphone-sm {
+  width: 200px;
+  height: 410px;
+}
+
+.phones-bridge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 50px;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.pb-label {
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--purple);
+  white-space: nowrap;
+}
+
+.recv-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--purple);
+  background: rgba(109,40,217,0.1);
+  border: 1px solid rgba(109,40,217,0.2);
+  border-radius: 20px;
+  padding: 4px 12px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* GF send screen */
+.send-ui {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #0F0A1A;
+}
+
+.sui-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 12px 10px;
+  flex-shrink: 0;
+}
+
+.sui-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.45);
+}
+
+.sui-photo-wrap {
+  flex: 1;
+  position: relative;
+  margin: 0 10px;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.sui-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sui-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 55%);
+}
+
+.sui-footer {
+  padding: 8px 10px 10px;
+  flex-shrink: 0;
+}
+
+.sui-caption-row {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 7px 10px;
+  margin-bottom: 6px;
+}
+
+.sui-caption-text {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+}
+
+.sui-send-btn {
+  width: 100%;
+  background: var(--purple);
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  cursor: default;
+}
+
+/* BF home screen */
+.homescreen-ui {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(160deg, #170a2e 0%, #0d081e 100%);
+  padding-top: 0;
+}
+
+.hs-time {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.88);
+  text-align: center;
+  padding: 34px 0 10px;
+  letter-spacing: -0.04em;
+  flex-shrink: 0;
+}
+
+.hs-widget {
+  margin: 0 10px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.hs-widget-photo-wrap {
+  height: 110px;
+  overflow: hidden;
+}
+
+.hs-widget-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hs-widget-info {
+  padding: 8px 10px 10px;
+}
+
+.hs-app-name {
+  display: block;
+  font-size: 7.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--purple-mid);
+  margin-bottom: 2px;
+}
+
+.hs-from {
+  display: block;
+  font-size: 8.5px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 3px;
+}
+
+.hs-msg {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.88);
+  font-style: italic;
+}
+
+.hs-app-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  padding: 14px 14px 0;
+}
+
+.hs-icon {
+  aspect-ratio: 1;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.06);
+}
+
+.hs-icon-active {
+  background: rgba(109,40,217,0.35);
+  border: 1px solid rgba(109,40,217,0.45);
 }
 
 .fishhook {
@@ -1694,6 +1934,81 @@ body {
   line-height: 1.5;
 }
 
+/* Moment demo card — shows what a sent moment looks like */
+.bento-moment-demo {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  border: none;
+}
+
+.bmd-photo-wrap {
+  position: absolute;
+  inset: 0;
+}
+
+.bmd-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bmd-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5,0,18,0.96) 0%, rgba(5,0,18,0.4) 50%, rgba(5,0,18,0.1) 100%);
+}
+
+.bmd-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 22px;
+  z-index: 2;
+}
+
+.bmd-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.bmd-app {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--purple-mid);
+}
+
+.bmd-badge {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--amber);
+  background: rgba(245,158,11,0.15);
+  border: 1px solid rgba(245,158,11,0.3);
+  border-radius: 20px;
+  padding: 3px 9px;
+}
+
+.bmd-caption {
+  font-size: 19px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.92);
+  font-style: italic;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.bmd-from {
+  font-size: 10px;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 0.04em;
+}
+
 /* Highlight card — photo background */
 .bento-highlight {
   padding: 0;
@@ -2032,7 +2347,6 @@ footer {
     min-height: 280px;
   }
 
-  .what-footer-arrow { padding: 0 24px; }
   .what-header { padding: 0 24px; }
 
   .bento-grid {
@@ -2081,10 +2395,16 @@ footer {
   .hero-actions     { align-items: center; }
   .hero-sub         { margin-left: auto; margin-right: auto; }
   .sticker-badge    { margin-left: auto; margin-right: auto; }
-  .fishhook-hero    { display: none; }
 
-  .iphone           { width: 226px; height: 460px; }
-  .widget-float     { right: -10px; width: 106px; }
+  .hero-phones      { gap: 8px; }
+  .iphone-sm        { width: 150px; height: 308px; }
+  .phones-bridge    { padding-bottom: 40px; }
+  .hp-label         { font-size: 9px; }
+  .hs-time          { font-size: 24px; padding: 26px 0 8px; }
+  .sui-topbar       { padding: 28px 8px 8px; }
+  .sui-photo-wrap   { margin: 0 8px; border-radius: 10px; }
+  .sui-footer       { padding: 6px 8px 8px; }
+  .hs-widget        { margin: 0 8px; }
 
   /* Editorial panels — single column on mobile */
   #what { padding: 60px 0 0; }
