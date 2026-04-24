@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoveLet — your person on your home screen</title>
+  <meta name="description" content="LoveLet puts your partner right on your home screen. One selfie, one message, zero drama. Not another social app — just u two." />
+  <meta property="og:title" content="LoveLet — your person on your home screen" />
+  <meta property="og:description" content="Not a dating app. Not a feed. Just you two." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0F0A1A" />
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       PRELOADER
+  ═══════════════════════════════════════ -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-tagline">✦ LoveLet</div>
+      <div class="preloader-line">
+        <span id="loader-text"></span><span class="blink-cursor">_</span>
+      </div>
+    </div>
+    <div class="preloader-bar"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CUSTOM CURSOR
+  ═══════════════════════════════════════ -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════
+       SITE WRAPPER
+  ═══════════════════════════════════════ -->
+  <div id="site" class="site-hidden">
+
+    <!-- ── NAV ────────────────────────────── -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="#" class="logo" aria-label="LoveLet home">
+          <span class="logo-heart" aria-hidden="true">♥</span>
+          <span class="logo-word">LoveLet</span>
+        </a>
+        <div class="nav-right">
+          <span class="nav-pill" aria-label="iOS only app">iOS only 📱</span>
+          <a href="#register" class="nav-cta hover-target">get early access →</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ── HERO ───────────────────────────── -->
+    <section id="hero" aria-labelledby="hero-headline">
+      <!-- Background grid -->
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+
+      <!-- Floating clouds -->
+      <div class="cloud cloud-lg cloud-1" aria-hidden="true"></div>
+      <div class="cloud cloud-lg cloud-2" aria-hidden="true"></div>
+      <div class="cloud cloud-md cloud-3" aria-hidden="true"></div>
+      <div class="cloud cloud-sm cloud-4" aria-hidden="true"></div>
+      <div class="cloud cloud-sm cloud-5" aria-hidden="true"></div>
+
+      <!-- Floating deco elements -->
+      <div class="deco-star deco-star-1" aria-hidden="true">✦</div>
+      <div class="deco-star deco-star-2" aria-hidden="true">✦</div>
+      <div class="deco-star deco-star-3" aria-hidden="true">★</div>
+      <div class="deco-dot-group" aria-hidden="true">
+        <span class="deco-dot"></span>
+        <span class="deco-dot"></span>
+        <span class="deco-dot"></span>
+      </div>
+
+      <div class="hero-inner">
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <div class="sticker-badge reveal" aria-label="A love letter but make it 2025">
+            ✦ &nbsp;a love letter. but make it 2025
+          </div>
+
+          <h1 id="hero-headline" class="hero-headline reveal">
+            <span class="hl-line">they're always</span>
+            <span class="hl-line">on your screen.</span>
+            <span class="hl-accent">(in the good way)</span>
+          </h1>
+
+          <p class="hero-sub reveal">
+            LoveLet puts your person right on your home screen.
+            one selfie. one message. zero drama.
+            not an app you check — an app that checks on them.
+          </p>
+
+          <div class="hero-tags reveal" role="list">
+            <span class="tag" role="listitem">🚫 no algorithm</span>
+            <span class="tag" role="listitem">🙏 no ads</span>
+            <span class="tag" role="listitem">💫 just u two</span>
+            <span class="tag" role="listitem">📲 widget-first</span>
+          </div>
+
+          <div class="hero-actions reveal">
+            <a href="#register" class="btn-primary hover-target">
+              get early access
+              <span class="btn-arrow">→</span>
+            </a>
+            <span class="hero-disclaimer">iOS only · free · dropping soon</span>
+          </div>
+        </div>
+
+        <!-- Right: iPhone mockup -->
+        <div class="hero-phone-col">
+          <!-- Fishhook annotation arrow -->
+          <svg class="fishhook fishhook-hero" viewBox="0 0 130 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path class="fh-path" d="M 15 15 C 15 15, 55 5, 80 35 C 105 65, 115 72, 115 72" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M 103 66 L 115 72 L 107 62" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <text x="10" y="10" fill="#6D28D9" font-size="8.5" font-family="DM Sans" font-style="italic">the widget lives here →</text>
+          </svg>
+
+          <div class="iphone-wrap" aria-label="iPhone app mockup showing LoveLet interface">
+            <div class="iphone">
+              <div class="iphone-notch" aria-hidden="true">
+                <div class="notch-camera"></div>
+              </div>
+              <div class="iphone-screen">
+                <div class="app-ui">
+                  <!-- App top bar -->
+                  <div class="app-topbar">
+                    <span class="app-title">Latest Moment</span>
+                    <div class="app-avatar-pill hover-target">
+                      <span>A</span>
+                    </div>
+                  </div>
+
+                  <!-- Moment card -->
+                  <div class="moment-card">
+                    <div class="moment-bg">
+                      <div class="moment-emoji-layer">🌅</div>
+                    </div>
+                    <div class="moment-overlay"></div>
+                    <div class="moment-meta">
+                      <span class="moment-from">from alex</span>
+                      <span class="moment-msg">"thinking about u rn tbh 🧡"</span>
+                    </div>
+                    <div class="moment-time">2 mins ago</div>
+                  </div>
+
+                  <!-- Share button -->
+                  <button class="app-share hover-target" aria-label="Share a moment">
+                    ✦ &nbsp;share a moment
+                  </button>
+                </div>
+              </div>
+              <div class="iphone-home-indicator" aria-hidden="true"></div>
+            </div>
+
+            <!-- Floating widget badge -->
+            <div class="widget-float" aria-label="Home screen widget preview">
+              <div class="widget-header">
+                <div class="widget-thumb">🌅</div>
+                <div class="widget-copy">
+                  <span class="widget-name">alex</span>
+                  <span class="widget-caption">thinking about u rn tbh 🧡</span>
+                </div>
+              </div>
+              <div class="widget-footer">Partner Moment · widget</div>
+            </div>
+          </div>
+
+          <!-- Small annotation -->
+          <div class="hero-phone-note reveal" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 2 L10 18 M5 13 L10 18 L15 13" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>lives on their actual home screen</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="scroll-cue" aria-hidden="true">
+        <div class="scroll-line-anim"></div>
+        <span>scroll</span>
+      </div>
+    </section>
+
+    <!-- ── MARQUEE STRIP ───────────────────── -->
+    <div class="marquee-wrap" aria-hidden="true" role="presentation">
+      <div class="marquee-track">
+        <div class="marquee-inner">
+          <span>widget-first ✦</span>
+          <span>no drama ✦</span>
+          <span>iOS only ✦</span>
+          <span>just u two ✦</span>
+          <span>zero ads ✦</span>
+          <span>offline ready ✦</span>
+          <span>home screen love ✦</span>
+          <span>no algorithm ✦</span>
+          <span>one tap away ✦</span>
+          <span>widget-first ✦</span>
+          <span>no drama ✦</span>
+          <span>iOS only ✦</span>
+          <span>just u two ✦</span>
+          <span>zero ads ✦</span>
+          <span>offline ready ✦</span>
+          <span>home screen love ✦</span>
+          <span>no algorithm ✦</span>
+          <span>one tap away ✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── WHAT IS IT ─────────────────────── -->
+    <section id="what" aria-labelledby="what-title">
+      <div class="section-inner">
+        <div class="section-label reveal">the deal</div>
+        <h2 id="what-title" class="section-title reveal">
+          not another texting app.<br />something actually different.
+        </h2>
+        <p class="section-sub reveal">
+          most apps want your attention. LoveLet gives it back — to the one person who actually deserves it.
+        </p>
+
+        <div class="what-cards">
+          <div class="what-card reveal hover-target" role="article">
+            <div class="wc-icon" aria-hidden="true">📸</div>
+            <h3>snap a moment</h3>
+            <p>take a selfie + write something. sweet, unhinged, or "made pasta tonight" — we don't judge. hit send.</p>
+          </div>
+
+          <!-- Fishhook arrow between cards -->
+          <div class="between-arrow" aria-hidden="true">
+            <svg class="fishhook fishhook-what-1" viewBox="0 0 80 60" fill="none">
+              <path class="fh-path" d="M 8 48 C 8 20, 72 20, 72 48" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" fill="none" stroke-dasharray="4 3"/>
+              <path d="M 62 42 L 72 48 L 62 54" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="what-card reveal hover-target" role="article">
+            <div class="wc-icon" aria-hidden="true">⚡</div>
+            <h3>they see it. instantly.</h3>
+            <p>no waiting. no notifications buried under 47 other apps. your moment hits their home screen. live.</p>
+          </div>
+
+          <!-- Second fishhook arrow -->
+          <div class="between-arrow" aria-hidden="true">
+            <svg class="fishhook fishhook-what-2" viewBox="0 0 80 60" fill="none">
+              <path class="fh-path" d="M 8 12 C 8 40, 72 40, 72 12" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" fill="none" stroke-dasharray="4 3"/>
+              <path d="M 62 18 L 72 12 L 62 6" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="what-card reveal hover-target" role="article">
+            <div class="wc-icon" aria-hidden="true">🏠</div>
+            <h3>lives on their screen</h3>
+            <p>a widget. not a notif. they see ur face every time they unlock. kinda powerful. kinda cute. very effective.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ────────────────────── -->
+    <section id="how" aria-labelledby="how-title">
+      <div class="section-inner">
+        <div class="section-label reveal label-light">how it works</div>
+        <h2 id="how-title" class="section-title reveal title-light">
+          stupidly simple.<br />annoyingly effective.
+        </h2>
+
+        <div class="steps">
+          <!-- Step 1 -->
+          <div class="step reveal" role="listitem">
+            <div class="step-left">
+              <span class="step-num" aria-hidden="true">01</span>
+            </div>
+            <div class="step-right">
+              <h3 class="step-name">pair up 🔗</h3>
+              <p class="step-desc">
+                one of you generates an invite code. the other enters it. boom — you're linked.
+                strictly 1:1. this isn't that kind of app.
+              </p>
+            </div>
+            <!-- S-curve arrow -->
+            <svg class="step-fishhook" viewBox="0 0 50 90" fill="none" aria-hidden="true">
+              <path class="fh-path" d="M 25 5 C 45 5, 45 45, 25 45 C 5 45, 5 85, 25 85" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M 17 77 L 25 85 L 33 77" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step reveal" role="listitem">
+            <div class="step-left">
+              <span class="step-num" aria-hidden="true">02</span>
+            </div>
+            <div class="step-right">
+              <h3 class="step-name">add the widget 📱</h3>
+              <p class="step-desc">
+                long-press home screen → tap "+" → search LoveLet → done.
+                their moments now live right there. every time you unlock your phone. no cap.
+              </p>
+            </div>
+            <!-- Reverse S-curve arrow -->
+            <svg class="step-fishhook" viewBox="0 0 50 90" fill="none" aria-hidden="true">
+              <path class="fh-path" d="M 25 5 C 5 5, 5 45, 25 45 C 45 45, 45 85, 25 85" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M 17 77 L 25 85 L 33 77" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step reveal" role="listitem">
+            <div class="step-left">
+              <span class="step-num" aria-hidden="true">03</span>
+            </div>
+            <div class="step-right">
+              <h3 class="step-name">send moments 🧡</h3>
+              <p class="step-desc">
+                tap share. take a selfie. write something real (or unhinged — seriously no judgment).
+                hit send. they feel things. repeat daily.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- iOS store badge area -->
+        <div class="ios-note reveal">
+          <div class="ios-icon" aria-hidden="true">🍎</div>
+          <div class="ios-text">
+            <strong>iOS only — for now.</strong>
+            <span>android? lol maybe one day. right now we're keeping it tight.</span>
+          </div>
+          <!-- Curved annotation arrow -->
+          <svg class="fishhook fishhook-ios" viewBox="0 0 80 50" fill="none" aria-hidden="true">
+            <path class="fh-path" d="M 70 10 C 70 10, 30 8, 10 35" stroke="rgba(249,245,238,0.3)" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="3 3"/>
+            <path d="M 5 28 L 10 35 L 17 28" stroke="rgba(249,245,238,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="28" y="7" fill="rgba(249,245,238,0.3)" font-size="8" font-family="DM Sans" font-style="italic">that's u btw</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VIBES / COUPLE SECTION ─────────── -->
+    <section id="vibes" aria-labelledby="vibes-title">
+      <div class="section-inner">
+        <div class="section-label reveal">the vibe check</div>
+        <h2 id="vibes-title" class="section-title reveal">
+          not your parents'<br />love language.
+        </h2>
+        <p class="section-sub reveal">
+          for the couples who send memes at 2am and also deeply care about each other. it contains multitudes.
+        </p>
+
+        <!-- Bento grid -->
+        <div class="bento-grid">
+
+          <!-- Card A: Quote -->
+          <div class="bento-card bento-quote reveal hover-target" role="article">
+            <div class="quote-marks" aria-hidden="true">"</div>
+            <blockquote class="quote-text">
+              opened my phone and saw her face. best way to start a monday. ever.
+            </blockquote>
+            <div class="quote-author">
+              <div class="author-avatar av-purple" aria-hidden="true">M</div>
+              <div class="author-info">
+                <strong>Marcus, 24</strong>
+                <span>ldr couple · 3 months in</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card B: Illustration (tall) -->
+          <div class="bento-card bento-ill bento-ill-purple reveal" role="img" aria-label="Couple illustration">
+            <div class="ill-emoji" aria-hidden="true">🫂</div>
+            <div class="ill-tag">home screen goals</div>
+            <!-- Floating clouds inside card -->
+            <div class="card-cloud card-cloud-1" aria-hidden="true"></div>
+            <div class="card-cloud card-cloud-2" aria-hidden="true"></div>
+          </div>
+
+          <!-- Card C: Big stat -->
+          <div class="bento-card bento-stat bento-dark reveal" role="article">
+            <span class="stat-number" aria-label="1 moment">1</span>
+            <span class="stat-label">moment at a time</span>
+            <p class="stat-desc">
+              no feed. no scroll. just the latest from the one person who matters.
+              that's it. that's literally the whole thing.
+            </p>
+          </div>
+
+          <!-- Card D: Quote 2 -->
+          <div class="bento-card bento-quote reveal hover-target" role="article">
+            <div class="quote-marks" aria-hidden="true">"</div>
+            <blockquote class="quote-text">
+              different cities. same home screen. it sounds dramatic but it genuinely helps.
+            </blockquote>
+            <div class="quote-author">
+              <div class="author-avatar av-amber" aria-hidden="true">S</div>
+              <div class="author-info">
+                <strong>Sofía, 22</strong>
+                <span>same city now. still uses it every day.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card E: Feature list -->
+          <div class="bento-card bento-features bento-lavender reveal" role="article">
+            <h3 class="features-title">what you actually get</h3>
+            <ul class="feature-list" role="list">
+              <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> widget-first design</li>
+              <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> no ads. ever.</li>
+              <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> no algorithm telling u what to see</li>
+              <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> works offline (cached moments)</li>
+              <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> 1:1 only. no groups. no noise.</li>
+              <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> auto image compression (ur battery is safe)</li>
+            </ul>
+          </div>
+
+          <!-- Card F: Illustration 2 -->
+          <div class="bento-card bento-ill bento-ill-amber reveal" role="img" aria-label="Couple sharing moments illustration">
+            <div class="ill-emoji" aria-hidden="true">💕</div>
+            <div class="ill-tag">no timeline. just moments.</div>
+            <div class="card-cloud card-cloud-3" aria-hidden="true"></div>
+          </div>
+
+          <!-- Card G: Wide feature highlight -->
+          <div class="bento-card bento-highlight reveal hover-target" role="article">
+            <!-- Fishhook arrow decoration -->
+            <svg class="fishhook fishhook-card" viewBox="0 0 60 40" fill="none" aria-hidden="true">
+              <path class="fh-path" d="M 5 35 C 5 10, 55 10, 55 35" stroke="rgba(109,40,217,0.3)" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="3 3"/>
+              <path d="M 47 30 L 55 35 L 47 40" stroke="rgba(109,40,217,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="highlight-content">
+              <span class="hl-chip">⚡ instant widget updates</span>
+              <h3>they see it. on their home screen. <em>before</em> they even open any app.</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PRE-REGISTRATION ────────────────── -->
+    <section id="register" aria-labelledby="register-title">
+      <!-- Floating clouds inside dark section -->
+      <div class="cloud cloud-reg cloud-r1" aria-hidden="true"></div>
+      <div class="cloud cloud-reg cloud-r2" aria-hidden="true"></div>
+      <div class="cloud cloud-reg cloud-r3" aria-hidden="true"></div>
+
+      <!-- Deco stars -->
+      <div class="reg-star reg-star-1" aria-hidden="true">✦</div>
+      <div class="reg-star reg-star-2" aria-hidden="true">★</div>
+      <div class="reg-star reg-star-3" aria-hidden="true">✦</div>
+
+      <div class="section-inner register-content">
+        <div class="sticker-badge sticker-amber reveal" aria-label="Limited early access">
+          🔔 &nbsp;limited early access
+        </div>
+
+        <h2 id="register-title" class="section-title title-light reveal">
+          get in before<br />everyone else does.
+        </h2>
+        <p class="section-sub sub-light reveal">
+          drop ur email. be the first to know when we drop. no spam.
+          just the one thing you actually signed up for.
+        </p>
+
+        <!-- Registration form -->
+        <form id="reg-form" class="reg-form reveal" novalidate aria-label="Early access registration">
+          <div class="form-wrap">
+            <label for="reg-email" class="sr-only">Your email address</label>
+            <input
+              type="email"
+              id="reg-email"
+              name="email"
+              placeholder="your@email.com"
+              required
+              autocomplete="email"
+              class="hover-target"
+              aria-required="true"
+            />
+            <button type="submit" class="btn-submit hover-target" aria-label="Join waitlist">
+              <span class="btn-default">count me in →</span>
+              <span class="btn-loading" aria-hidden="true">sending...</span>
+              <span class="btn-done" aria-hidden="true">✓ you're in!</span>
+            </button>
+          </div>
+          <p class="form-fine" aria-live="polite">iOS app · launching soon · no spam ever</p>
+          <p id="form-error" class="form-error" role="alert" aria-live="assertive"></p>
+        </form>
+
+        <!-- Success state (hidden until form submits) -->
+        <div id="success-state" class="success-state" aria-live="polite" aria-hidden="true">
+          <div class="success-icon" aria-hidden="true">🎉</div>
+          <h3>you're on the list!</h3>
+          <p>we'll hit ur inbox the second LoveLet drops. no cap.</p>
+        </div>
+
+        <!-- Annotation fishhook pointing at form -->
+        <svg class="fishhook fishhook-form" viewBox="0 0 110 60" fill="none" aria-hidden="true">
+          <path class="fh-path" d="M 100 12 C 100 12, 50 8, 25 42" stroke="rgba(249,245,238,0.25)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M 18 36 L 25 42 L 32 36" stroke="rgba(249,245,238,0.25)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="42" y="9" fill="rgba(249,245,238,0.25)" font-size="8" font-family="DM Sans" font-style="italic">ur email goes here</text>
+        </svg>
+
+        <!-- Counter chip -->
+        <div class="waitlist-chip reveal">
+          <span class="chip-dot" aria-hidden="true"></span>
+          <span>230+ people already on the list</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ──────────────────────────── -->
+    <footer id="footer" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-heart" aria-hidden="true">♥</span>
+          <span class="logo-word">LoveLet</span>
+        </div>
+        <div class="footer-center">
+          <span>iOS only · dropping soon</span>
+          <span class="footer-dot" aria-hidden="true">·</span>
+          <span>made with ✦ and maybe some desperation</span>
+        </div>
+        <div class="footer-right">
+          <span>© 2025 LoveLet</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /#site -->
+
+  <script src="app.js"></script>
+</body>
+</html>
