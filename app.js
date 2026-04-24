@@ -162,7 +162,8 @@ function initArrowDrawing() {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('drawn');
+          // Must set inline style to 0 — CSS class can't override inline style
+          entry.target.style.strokeDashoffset = '0';
           observer.unobserve(entry.target);
         }
       });
@@ -171,7 +172,6 @@ function initArrowDrawing() {
   );
 
   paths.forEach((path) => {
-    // Measure actual path length and set dasharray accordingly
     const len = path.getTotalLength ? path.getTotalLength() : 300;
     path.style.strokeDasharray  = len;
     path.style.strokeDashoffset = len;
