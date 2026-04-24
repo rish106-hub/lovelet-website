@@ -10,7 +10,6 @@
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0F0A1A" />
 
-  <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
@@ -19,9 +18,7 @@
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════
-       PRELOADER
-  ═══════════════════════════════════════ -->
+  <!-- PRELOADER -->
   <div id="preloader" aria-hidden="true">
     <div class="preloader-content">
       <div class="preloader-tagline">✦ LoveLet</div>
@@ -32,18 +29,14 @@
     <div class="preloader-bar"></div>
   </div>
 
-  <!-- ═══════════════════════════════════════
-       CUSTOM CURSOR
-  ═══════════════════════════════════════ -->
+  <!-- CUSTOM CURSOR -->
   <div id="cursor" aria-hidden="true"></div>
   <div id="cursor-dot" aria-hidden="true"></div>
 
-  <!-- ═══════════════════════════════════════
-       SITE WRAPPER
-  ═══════════════════════════════════════ -->
+  <!-- SITE -->
   <div id="site" class="site-hidden">
 
-    <!-- ── NAV ────────────────────────────── -->
+    <!-- NAV -->
     <nav id="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="#" class="logo" aria-label="LoveLet home">
@@ -51,25 +44,24 @@
           <span class="logo-word">LoveLet</span>
         </a>
         <div class="nav-right">
-          <span class="nav-pill" aria-label="iOS only app">iOS only 📱</span>
+          <span class="nav-pill">iOS only</span>
           <a href="#register" class="nav-cta hover-target">get early access →</a>
         </div>
       </div>
     </nav>
 
-    <!-- ── HERO ───────────────────────────── -->
+    <!-- HERO -->
     <section id="hero" aria-labelledby="hero-headline">
-      <!-- Background grid -->
       <div class="hero-grid-bg" aria-hidden="true"></div>
 
-      <!-- Floating clouds -->
+      <!-- Clouds -->
       <div class="cloud cloud-lg cloud-1" aria-hidden="true"></div>
       <div class="cloud cloud-lg cloud-2" aria-hidden="true"></div>
       <div class="cloud cloud-md cloud-3" aria-hidden="true"></div>
       <div class="cloud cloud-sm cloud-4" aria-hidden="true"></div>
       <div class="cloud cloud-sm cloud-5" aria-hidden="true"></div>
 
-      <!-- Floating deco elements -->
+      <!-- Deco -->
       <div class="deco-star deco-star-1" aria-hidden="true">✦</div>
       <div class="deco-star deco-star-2" aria-hidden="true">✦</div>
       <div class="deco-star deco-star-3" aria-hidden="true">★</div>
@@ -80,9 +72,8 @@
       </div>
 
       <div class="hero-inner">
-        <!-- Left: Text -->
         <div class="hero-text">
-          <div class="sticker-badge reveal" aria-label="A love letter but make it 2025">
+          <div class="sticker-badge reveal">
             ✦ &nbsp;a love letter. but make it 2025
           </div>
 
@@ -99,10 +90,10 @@
           </p>
 
           <div class="hero-tags reveal" role="list">
-            <span class="tag" role="listitem">🚫 no algorithm</span>
-            <span class="tag" role="listitem">🙏 no ads</span>
-            <span class="tag" role="listitem">💫 just u two</span>
-            <span class="tag" role="listitem">📲 widget-first</span>
+            <span class="tag" role="listitem">no algorithm</span>
+            <span class="tag" role="listitem">no ads</span>
+            <span class="tag" role="listitem">just u two</span>
+            <span class="tag" role="listitem">widget-first</span>
           </div>
 
           <div class="hero-actions reveal">
@@ -114,31 +105,29 @@
           </div>
         </div>
 
-        <!-- Right: iPhone mockup -->
+        <!-- iPhone mockup -->
         <div class="hero-phone-col">
-          <!-- Fishhook annotation arrow -->
-          <svg class="fishhook fishhook-hero" viewBox="0 0 130 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path class="fh-path" d="M 15 15 C 15 15, 55 5, 80 35 C 105 65, 115 72, 115 72" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-            <path d="M 103 66 L 115 72 L 107 62" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <text x="10" y="10" fill="#6D28D9" font-size="8.5" font-family="DM Sans" font-style="italic">the widget lives here →</text>
+          <!-- Proper fishhook annotation arrow -->
+          <svg class="fishhook fishhook-hero" viewBox="0 0 120 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path class="fh-path"
+              d="M 14 20 C 14 20, 40 8, 62 22 C 82 35, 88 60, 84 85"
+              stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <!-- Fishhook arrowhead — follows the tangent of the path end -->
+            <path d="M 74 80 L 84 85 L 92 77" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <text x="4" y="16" fill="#6D28D9" font-size="8.5" font-family="DM Sans" font-style="italic">the widget lives here</text>
           </svg>
 
-          <div class="iphone-wrap" aria-label="iPhone app mockup showing LoveLet interface">
+          <div class="iphone-wrap" aria-label="iPhone app mockup">
             <div class="iphone">
               <div class="iphone-notch" aria-hidden="true">
                 <div class="notch-camera"></div>
               </div>
               <div class="iphone-screen">
                 <div class="app-ui">
-                  <!-- App top bar -->
                   <div class="app-topbar">
                     <span class="app-title">Latest Moment</span>
-                    <div class="app-avatar-pill hover-target">
-                      <span>A</span>
-                    </div>
+                    <div class="app-avatar-pill hover-target"><span>A</span></div>
                   </div>
-
-                  <!-- Moment card -->
                   <div class="moment-card">
                     <div class="moment-bg">
                       <div class="moment-emoji-layer">🌅</div>
@@ -146,12 +135,10 @@
                     <div class="moment-overlay"></div>
                     <div class="moment-meta">
                       <span class="moment-from">from alex</span>
-                      <span class="moment-msg">"thinking about u rn tbh 🧡"</span>
+                      <span class="moment-msg">"thinking about u rn tbh"</span>
                     </div>
                     <div class="moment-time">2 mins ago</div>
                   </div>
-
-                  <!-- Share button -->
                   <button class="app-share hover-target" aria-label="Share a moment">
                     ✦ &nbsp;share a moment
                   </button>
@@ -160,22 +147,20 @@
               <div class="iphone-home-indicator" aria-hidden="true"></div>
             </div>
 
-            <!-- Floating widget badge -->
             <div class="widget-float" aria-label="Home screen widget preview">
               <div class="widget-header">
                 <div class="widget-thumb">🌅</div>
                 <div class="widget-copy">
                   <span class="widget-name">alex</span>
-                  <span class="widget-caption">thinking about u rn tbh 🧡</span>
+                  <span class="widget-caption">thinking about u rn tbh</span>
                 </div>
               </div>
               <div class="widget-footer">Partner Moment · widget</div>
             </div>
           </div>
 
-          <!-- Small annotation -->
           <div class="hero-phone-note reveal" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
               <path d="M10 2 L10 18 M5 13 L10 18 L15 13" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <span>lives on their actual home screen</span>
@@ -183,14 +168,13 @@
         </div>
       </div>
 
-      <!-- Scroll cue -->
       <div class="scroll-cue" aria-hidden="true">
         <div class="scroll-line-anim"></div>
         <span>scroll</span>
       </div>
     </section>
 
-    <!-- ── MARQUEE STRIP ───────────────────── -->
+    <!-- MARQUEE -->
     <div class="marquee-wrap" aria-hidden="true" role="presentation">
       <div class="marquee-track">
         <div class="marquee-inner">
@@ -216,9 +200,9 @@
       </div>
     </div>
 
-    <!-- ── WHAT IS IT ─────────────────────── -->
+    <!-- THE DEAL — editorial reveal panels -->
     <section id="what" aria-labelledby="what-title">
-      <div class="section-inner">
+      <div class="section-inner what-header">
         <div class="section-label reveal">the deal</div>
         <h2 id="what-title" class="section-title reveal">
           not another texting app.<br />something actually different.
@@ -226,46 +210,105 @@
         <p class="section-sub reveal">
           most apps want your attention. LoveLet gives it back — to the one person who actually deserves it.
         </p>
+      </div>
 
-        <div class="what-cards">
-          <div class="what-card reveal hover-target" role="article">
-            <div class="wc-icon" aria-hidden="true">📸</div>
-            <h3>snap a moment</h3>
-            <p>take a selfie + write something. sweet, unhinged, or "made pasta tonight" — we don't judge. hit send.</p>
+      <!-- Editorial reveal grid — NOT a standard 3-col layout -->
+      <div class="feat-editorial reveal">
+
+        <!-- Large left panel -->
+        <div class="feat-panel feat-large hover-target" role="article">
+          <div class="feat-img-wrap">
+            <!--
+              Replace with a real photo of an Indian couple (fair complexion).
+              Current: Unsplash fallback — update src to your preferred image.
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&h=1100&q=80"
+              alt="Happy couple sharing a moment together"
+              class="feat-img"
+              loading="eager"
+              onerror="this.parentElement.classList.add('img-fb-1')"
+            />
+          </div>
+          <div class="feat-overlay"></div>
+          <div class="feat-content">
+            <span class="feat-num">01</span>
+            <h3 class="feat-heading">snap a moment</h3>
+            <p class="feat-text">
+              take a selfie + write something. sweet, unhinged, or "made pasta tonight."
+              we don't judge. hit send.
+            </p>
+          </div>
+          <!-- Connector fishhook arrow -->
+          <svg class="feat-connector-arrow" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <circle cx="22" cy="22" r="21" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+            <path d="M 14 22 L 30 22 M 22 14 L 30 22 L 22 30" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Right column — 2 stacked panels -->
+        <div class="feat-col">
+          <div class="feat-panel feat-sm hover-target" role="article">
+            <div class="feat-img-wrap">
+              <!--
+                Replace with a Caucasian couple photo.
+              -->
+              <img
+                src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=700&h=580&q=80"
+                alt="Couple smiling together"
+                class="feat-img"
+                loading="lazy"
+                onerror="this.parentElement.classList.add('img-fb-2')"
+              />
+            </div>
+            <div class="feat-overlay"></div>
+            <div class="feat-content">
+              <span class="feat-num">02</span>
+              <h3 class="feat-heading">they see it. instantly.</h3>
+              <p class="feat-text">
+                no waiting. no notifications buried. your moment hits their home screen. live.
+              </p>
+            </div>
           </div>
 
-          <!-- Fishhook arrow between cards -->
-          <div class="between-arrow" aria-hidden="true">
-            <svg class="fishhook fishhook-what-1" viewBox="0 0 80 60" fill="none">
-              <path class="fh-path" d="M 8 48 C 8 20, 72 20, 72 48" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" fill="none" stroke-dasharray="4 3"/>
-              <path d="M 62 42 L 72 48 L 62 54" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-
-          <div class="what-card reveal hover-target" role="article">
-            <div class="wc-icon" aria-hidden="true">⚡</div>
-            <h3>they see it. instantly.</h3>
-            <p>no waiting. no notifications buried under 47 other apps. your moment hits their home screen. live.</p>
-          </div>
-
-          <!-- Second fishhook arrow -->
-          <div class="between-arrow" aria-hidden="true">
-            <svg class="fishhook fishhook-what-2" viewBox="0 0 80 60" fill="none">
-              <path class="fh-path" d="M 8 12 C 8 40, 72 40, 72 12" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" fill="none" stroke-dasharray="4 3"/>
-              <path d="M 62 18 L 72 12 L 62 6" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-
-          <div class="what-card reveal hover-target" role="article">
-            <div class="wc-icon" aria-hidden="true">🏠</div>
-            <h3>lives on their screen</h3>
-            <p>a widget. not a notif. they see ur face every time they unlock. kinda powerful. kinda cute. very effective.</p>
+          <div class="feat-panel feat-sm feat-purple hover-target" role="article">
+            <div class="feat-img-wrap">
+              <!--
+                Replace with a Spanish couple photo.
+              -->
+              <img
+                src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=700&h=580&q=80"
+                alt="Couple looking at each other"
+                class="feat-img"
+                loading="lazy"
+                onerror="this.parentElement.classList.add('img-fb-3')"
+              />
+            </div>
+            <div class="feat-overlay feat-overlay-tinted"></div>
+            <div class="feat-content">
+              <span class="feat-num">03</span>
+              <h3 class="feat-heading">lives on their screen</h3>
+              <p class="feat-text">
+                a widget. not a notif. they see ur face every time they unlock. every single time.
+              </p>
+            </div>
           </div>
         </div>
+
+      </div>
+
+      <!-- Connector fishhook between editorial panels and next section -->
+      <div class="what-footer-arrow" aria-hidden="true">
+        <svg class="fishhook" viewBox="0 0 160 50" fill="none">
+          <path class="fh-path"
+            d="M 20 40 C 20 40, 60 15, 80 25 C 100 35, 140 20, 150 15"
+            stroke="rgba(109,40,217,0.25)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 141 9 L 150 15 L 143 22" stroke="rgba(109,40,217,0.25)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
     </section>
 
-    <!-- ── HOW IT WORKS ────────────────────── -->
+    <!-- HOW IT WORKS -->
     <section id="how" aria-labelledby="how-title">
       <div class="section-inner">
         <div class="section-label reveal label-light">how it works</div>
@@ -274,51 +317,52 @@
         </h2>
 
         <div class="steps">
-          <!-- Step 1 -->
           <div class="step reveal" role="listitem">
             <div class="step-left">
               <span class="step-num" aria-hidden="true">01</span>
             </div>
             <div class="step-right">
-              <h3 class="step-name">pair up 🔗</h3>
+              <h3 class="step-name">pair up</h3>
               <p class="step-desc">
                 one of you generates an invite code. the other enters it. boom — you're linked.
                 strictly 1:1. this isn't that kind of app.
               </p>
             </div>
-            <!-- S-curve arrow -->
-            <svg class="step-fishhook" viewBox="0 0 50 90" fill="none" aria-hidden="true">
-              <path class="fh-path" d="M 25 5 C 45 5, 45 45, 25 45 C 5 45, 5 85, 25 85" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M 17 77 L 25 85 L 33 77" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- S-curve fishhook — pronounced curves -->
+            <svg class="step-fishhook" viewBox="0 0 54 100" fill="none" aria-hidden="true">
+              <path class="fh-path"
+                d="M 27 6 C 50 6, 50 48, 27 48 C 4 48, 4 90, 27 90"
+                stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M 18 82 L 27 90 L 36 82" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
 
-          <!-- Step 2 -->
           <div class="step reveal" role="listitem">
             <div class="step-left">
               <span class="step-num" aria-hidden="true">02</span>
             </div>
             <div class="step-right">
-              <h3 class="step-name">add the widget 📱</h3>
+              <h3 class="step-name">add the widget</h3>
               <p class="step-desc">
                 long-press home screen → tap "+" → search LoveLet → done.
-                their moments now live right there. every time you unlock your phone. no cap.
+                their moments now live right there. every time you unlock your phone.
               </p>
             </div>
-            <!-- Reverse S-curve arrow -->
-            <svg class="step-fishhook" viewBox="0 0 50 90" fill="none" aria-hidden="true">
-              <path class="fh-path" d="M 25 5 C 5 5, 5 45, 25 45 C 45 45, 45 85, 25 85" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M 17 77 L 25 85 L 33 77" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Reverse S-curve -->
+            <svg class="step-fishhook" viewBox="0 0 54 100" fill="none" aria-hidden="true">
+              <path class="fh-path"
+                d="M 27 6 C 4 6, 4 48, 27 48 C 50 48, 50 90, 27 90"
+                stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M 18 82 L 27 90 L 36 82" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
 
-          <!-- Step 3 -->
           <div class="step reveal" role="listitem">
             <div class="step-left">
               <span class="step-num" aria-hidden="true">03</span>
             </div>
             <div class="step-right">
-              <h3 class="step-name">send moments 🧡</h3>
+              <h3 class="step-name">send moments</h3>
               <p class="step-desc">
                 tap share. take a selfie. write something real (or unhinged — seriously no judgment).
                 hit send. they feel things. repeat daily.
@@ -327,24 +371,30 @@
           </div>
         </div>
 
-        <!-- iOS store badge area -->
+        <!-- iOS badge -->
         <div class="ios-note reveal">
-          <div class="ios-icon" aria-hidden="true">🍎</div>
+          <div class="ios-badge-icon" aria-hidden="true">
+            <svg viewBox="0 0 22 22" fill="none" width="22" height="22">
+              <path d="M17.05 12.536c-.027-2.717 2.22-4.024 2.32-4.089-1.264-1.848-3.23-2.1-3.933-2.13-1.674-.17-3.276.99-4.125.99-.848 0-2.16-.966-3.558-.94-1.829.027-3.523 1.066-4.468 2.7-1.912 3.313-.49 8.22 1.371 10.91.91 1.315 1.996 2.79 3.42 2.737 1.376-.056 1.896-.886 3.56-.886 1.665 0 2.134.886 3.59.857 1.48-.027 2.417-1.337 3.318-2.658.047-.069.092-.138.136-.208a7.4 7.4 0 0 0-3.63-6.284Z" fill="white"/>
+              <path d="M14.275 4.547C15.02 3.64 15.518 2.4 15.374 1.14c-1.076.044-2.378.717-3.148 1.621-.692.8-1.297 2.08-1.135 3.307 1.2.093 2.43-.607 3.184-1.521Z" fill="white"/>
+            </svg>
+          </div>
           <div class="ios-text">
             <strong>iOS only — for now.</strong>
             <span>android? lol maybe one day. right now we're keeping it tight.</span>
           </div>
-          <!-- Curved annotation arrow -->
-          <svg class="fishhook fishhook-ios" viewBox="0 0 80 50" fill="none" aria-hidden="true">
-            <path class="fh-path" d="M 70 10 C 70 10, 30 8, 10 35" stroke="rgba(249,245,238,0.3)" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="3 3"/>
-            <path d="M 5 28 L 10 35 L 17 28" stroke="rgba(249,245,238,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="28" y="7" fill="rgba(249,245,238,0.3)" font-size="8" font-family="DM Sans" font-style="italic">that's u btw</text>
+          <svg class="fishhook fishhook-ios" viewBox="0 0 80 55" fill="none" aria-hidden="true">
+            <path class="fh-path"
+              d="M 72 12 C 72 12, 45 8, 28 22 C 14 34, 10 44, 10 44"
+              stroke="rgba(249,245,238,0.28)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M 5 37 L 10 44 L 18 38" stroke="rgba(249,245,238,0.28)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="30" y="8" fill="rgba(249,245,238,0.28)" font-size="8" font-family="DM Sans" font-style="italic">that's u btw</text>
           </svg>
         </div>
       </div>
     </section>
 
-    <!-- ── VIBES / COUPLE SECTION ─────────── -->
+    <!-- VIBE CHECK — all cards with couple photos -->
     <section id="vibes" aria-labelledby="vibes-title">
       <div class="section-inner">
         <div class="section-label reveal">the vibe check</div>
@@ -352,63 +402,98 @@
           not your parents'<br />love language.
         </h2>
         <p class="section-sub reveal">
-          for the couples who send memes at 2am and also deeply care about each other. it contains multitudes.
+          for the couples who send each other nonsense at 2am and also care deeply. it contains multitudes.
         </p>
 
-        <!-- Bento grid -->
         <div class="bento-grid">
 
-          <!-- Card A: Quote -->
-          <div class="bento-card bento-quote reveal hover-target" role="article">
-            <div class="quote-marks" aria-hidden="true">"</div>
-            <blockquote class="quote-text">
-              opened my phone and saw her face. best way to start a monday. ever.
-            </blockquote>
-            <div class="quote-author">
-              <div class="author-avatar av-purple" aria-hidden="true">M</div>
-              <div class="author-info">
-                <strong>Marcus, 24</strong>
-                <span>ldr couple · 3 months in</span>
+          <!-- Card 1: Quote on couple photo (Marcus) -->
+          <div class="bento-card bento-photo-quote reveal hover-target" role="article">
+            <div class="bpq-img-wrap">
+              <!--
+                Indian couple (fair). Replace with a verified photo.
+              -->
+              <img
+                src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Happy Indian couple"
+                loading="lazy"
+                class="bpq-img"
+                onerror="this.parentElement.classList.add('bpq-fb-1')"
+              />
+            </div>
+            <div class="bpq-overlay"></div>
+            <div class="bpq-content">
+              <blockquote class="bpq-text">
+                opened my phone and saw her face. best way to start a monday. ever.
+              </blockquote>
+              <div class="bpq-author">
+                <div class="bpq-avatar av-purple">M</div>
+                <div class="bpq-info">
+                  <strong>Marcus, 24</strong>
+                  <span>ldr couple · 3 months in</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Card B: Illustration (tall) -->
-          <div class="bento-card bento-ill bento-ill-purple reveal" role="img" aria-label="Couple illustration">
-            <div class="ill-emoji" aria-hidden="true">🫂</div>
-            <div class="ill-tag">home screen goals</div>
-            <!-- Floating clouds inside card -->
+          <!-- Card 2: Couple photo (tall, spans 2 rows) -->
+          <div class="bento-card bento-photo-tall reveal" role="img" aria-label="Couple together">
+            <!--
+              Caucasian / Russian couple. Replace with a verified photo.
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?auto=format&fit=crop&w=600&h=900&q=80"
+              alt="Happy couple smiling"
+              loading="lazy"
+              class="bpt-img"
+              onerror="this.classList.add('img-fb-hidden');this.parentElement.classList.add('bpt-fb-1')"
+            />
+            <div class="bpt-tag">home screen goals</div>
             <div class="card-cloud card-cloud-1" aria-hidden="true"></div>
             <div class="card-cloud card-cloud-2" aria-hidden="true"></div>
           </div>
 
-          <!-- Card C: Big stat -->
-          <div class="bento-card bento-stat bento-dark reveal" role="article">
+          <!-- Card 3: Stat card -->
+          <div class="bento-card bento-stat reveal" role="article">
             <span class="stat-number" aria-label="1 moment">1</span>
             <span class="stat-label">moment at a time</span>
             <p class="stat-desc">
               no feed. no scroll. just the latest from the one person who matters.
-              that's it. that's literally the whole thing.
+              that's it. that's the whole thing.
             </p>
           </div>
 
-          <!-- Card D: Quote 2 -->
-          <div class="bento-card bento-quote reveal hover-target" role="article">
-            <div class="quote-marks" aria-hidden="true">"</div>
-            <blockquote class="quote-text">
-              different cities. same home screen. it sounds dramatic but it genuinely helps.
-            </blockquote>
-            <div class="quote-author">
-              <div class="author-avatar av-amber" aria-hidden="true">S</div>
-              <div class="author-info">
-                <strong>Sofía, 22</strong>
-                <span>same city now. still uses it every day.</span>
+          <!-- Card 4: Quote on couple photo (Sofía) -->
+          <div class="bento-card bento-photo-quote reveal hover-target" role="article">
+            <div class="bpq-img-wrap">
+              <!--
+                Spanish couple. Replace with a verified photo.
+              -->
+              <img
+                src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Happy couple outdoors"
+                loading="lazy"
+                class="bpq-img"
+                onerror="this.parentElement.classList.add('bpq-fb-2')"
+              />
+            </div>
+            <div class="bpq-overlay"></div>
+            <div class="bpq-content">
+              <blockquote class="bpq-text">
+                different cities. same home screen. it sounds dramatic but it genuinely helps.
+              </blockquote>
+              <div class="bpq-author">
+                <div class="bpq-avatar av-amber">S</div>
+                <div class="bpq-info">
+                  <strong>Sofía, 22</strong>
+                  <span>same city now. still uses it every day.</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Card E: Feature list -->
-          <div class="bento-card bento-features bento-lavender reveal" role="article">
+          <!-- Card 5: Feature list (spans 2 cols) -->
+          <div class="bento-card bento-features reveal" role="article">
             <h3 class="features-title">what you actually get</h3>
             <ul class="feature-list" role="list">
               <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> widget-first design</li>
@@ -416,49 +501,71 @@
               <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> no algorithm telling u what to see</li>
               <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> works offline (cached moments)</li>
               <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> 1:1 only. no groups. no noise.</li>
-              <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> auto image compression (ur battery is safe)</li>
+              <li role="listitem"><span class="fl-star" aria-hidden="true">✦</span> auto image compression</li>
             </ul>
           </div>
 
-          <!-- Card F: Illustration 2 -->
-          <div class="bento-card bento-ill bento-ill-amber reveal" role="img" aria-label="Couple sharing moments illustration">
-            <div class="ill-emoji" aria-hidden="true">💕</div>
-            <div class="ill-tag">no timeline. just moments.</div>
+          <!-- Card 6: Couple photo -->
+          <div class="bento-card bento-photo-tall reveal" role="img" aria-label="Couple sharing a moment">
+            <!--
+              Another diverse couple (Russian / Caucasian). Replace with a verified photo.
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?auto=format&fit=crop&w=600&h=700&q=80"
+              alt="Couple looking happy together"
+              loading="lazy"
+              class="bpt-img"
+              onerror="this.classList.add('img-fb-hidden');this.parentElement.classList.add('bpt-fb-2')"
+            />
+            <div class="bpt-tag">no timeline. just moments.</div>
             <div class="card-cloud card-cloud-3" aria-hidden="true"></div>
           </div>
 
-          <!-- Card G: Wide feature highlight -->
+          <!-- Card 7: Full-width highlight with couple photo bg -->
           <div class="bento-card bento-highlight reveal hover-target" role="article">
-            <!-- Fishhook arrow decoration -->
-            <svg class="fishhook fishhook-card" viewBox="0 0 60 40" fill="none" aria-hidden="true">
-              <path class="fh-path" d="M 5 35 C 5 10, 55 10, 55 35" stroke="rgba(109,40,217,0.3)" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="3 3"/>
-              <path d="M 47 30 L 55 35 L 47 40" stroke="rgba(109,40,217,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <div class="bhl-img-wrap">
+              <!--
+                Wide couple photo for the highlight card.
+              -->
+              <img
+                src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1400&h=400&q=80"
+                alt="Happy couple"
+                loading="lazy"
+                class="bhl-img"
+                onerror="this.parentElement.classList.add('bhl-fb')"
+              />
+            </div>
+            <div class="bhl-overlay"></div>
             <div class="highlight-content">
-              <span class="hl-chip">⚡ instant widget updates</span>
+              <span class="hl-chip">instant widget updates</span>
               <h3>they see it. on their home screen. <em>before</em> they even open any app.</h3>
             </div>
+            <!-- Fishhook annotation on highlight card -->
+            <svg class="fishhook fishhook-card" viewBox="0 0 70 50" fill="none" aria-hidden="true">
+              <path class="fh-path"
+                d="M 8 42 C 8 42, 25 15, 50 12 C 62 11, 68 18, 65 28"
+                stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M 56 24 L 65 28 L 60 36" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ── PRE-REGISTRATION ────────────────── -->
+    <!-- PRE-REGISTRATION -->
     <section id="register" aria-labelledby="register-title">
-      <!-- Floating clouds inside dark section -->
       <div class="cloud cloud-reg cloud-r1" aria-hidden="true"></div>
       <div class="cloud cloud-reg cloud-r2" aria-hidden="true"></div>
       <div class="cloud cloud-reg cloud-r3" aria-hidden="true"></div>
 
-      <!-- Deco stars -->
       <div class="reg-star reg-star-1" aria-hidden="true">✦</div>
       <div class="reg-star reg-star-2" aria-hidden="true">★</div>
       <div class="reg-star reg-star-3" aria-hidden="true">✦</div>
 
       <div class="section-inner register-content">
-        <div class="sticker-badge sticker-amber reveal" aria-label="Limited early access">
-          🔔 &nbsp;limited early access
+        <div class="sticker-badge sticker-amber reveal">
+          ✦ &nbsp;limited early access
         </div>
 
         <h2 id="register-title" class="section-title title-light reveal">
@@ -469,7 +576,6 @@
           just the one thing you actually signed up for.
         </p>
 
-        <!-- Registration form -->
         <form id="reg-form" class="reg-form reveal" novalidate aria-label="Early access registration">
           <div class="form-wrap">
             <label for="reg-email" class="sr-only">Your email address</label>
@@ -493,21 +599,26 @@
           <p id="form-error" class="form-error" role="alert" aria-live="assertive"></p>
         </form>
 
-        <!-- Success state (hidden until form submits) -->
         <div id="success-state" class="success-state" aria-live="polite" aria-hidden="true">
-          <div class="success-icon" aria-hidden="true">🎉</div>
+          <div class="success-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" width="52" height="52">
+              <circle cx="24" cy="24" r="23" stroke="#A78BFA" stroke-width="2"/>
+              <path d="M 14 24 L 21 31 L 34 17" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <h3>you're on the list!</h3>
           <p>we'll hit ur inbox the second LoveLet drops. no cap.</p>
         </div>
 
-        <!-- Annotation fishhook pointing at form -->
-        <svg class="fishhook fishhook-form" viewBox="0 0 110 60" fill="none" aria-hidden="true">
-          <path class="fh-path" d="M 100 12 C 100 12, 50 8, 25 42" stroke="rgba(249,245,238,0.25)" stroke-width="2" stroke-linecap="round" fill="none"/>
-          <path d="M 18 36 L 25 42 L 32 36" stroke="rgba(249,245,238,0.25)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="42" y="9" fill="rgba(249,245,238,0.25)" font-size="8" font-family="DM Sans" font-style="italic">ur email goes here</text>
+        <!-- Annotation fishhook pointing at form input -->
+        <svg class="fishhook fishhook-form" viewBox="0 0 110 65" fill="none" aria-hidden="true">
+          <path class="fh-path"
+            d="M 102 14 C 102 14, 70 8, 48 22 C 32 34, 24 48, 24 48"
+            stroke="rgba(249,245,238,0.22)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M 16 41 L 24 48 L 32 41" stroke="rgba(249,245,238,0.22)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="48" y="10" fill="rgba(249,245,238,0.22)" font-size="8" font-family="DM Sans" font-style="italic">ur email goes here</text>
         </svg>
 
-        <!-- Counter chip -->
         <div class="waitlist-chip reveal">
           <span class="chip-dot" aria-hidden="true"></span>
           <span>230+ people already on the list</span>
@@ -515,7 +626,7 @@
       </div>
     </section>
 
-    <!-- ── FOOTER ──────────────────────────── -->
+    <!-- FOOTER -->
     <footer id="footer" role="contentinfo">
       <div class="footer-inner">
         <div class="footer-logo">
