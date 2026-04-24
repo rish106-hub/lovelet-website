@@ -302,45 +302,7 @@ function simulateSubmit(ms) {
 }
 
 
-/* ═══════════════════════════════════════════
-   PHONE MOCKUP — Moment cycling animation
-   ═══════════════════════════════════════════ */
-(function initMomentCycle() {
-  const moments = [
-    { emoji: '🌅', caption: '"thinking about u rn tbh 🧡"' },
-    { emoji: '☕', caption: '"made your fav coffee. come home."' },
-    { emoji: '🌙', caption: '"good night. you\'re my fav person."' },
-    { emoji: '🎵', caption: '"this song is literally us."' },
-    { emoji: '🌻', caption: '"saw this and thought of u immediately."' },
-  ];
-
-  const emojiEl   = document.querySelector('.moment-emoji-layer');
-  const captionEl = document.querySelector('.moment-msg');
-
-  if (!emojiEl || !captionEl) return;
-
-  let idx = 0;
-
-  function cycleMoment() {
-    idx = (idx + 1) % moments.length;
-    const m = moments[idx];
-
-    emojiEl.style.opacity   = '0';
-    captionEl.style.opacity = '0';
-
-    setTimeout(() => {
-      emojiEl.textContent   = m.emoji;
-      captionEl.textContent = m.caption;
-      emojiEl.style.opacity   = '1';
-      captionEl.style.opacity = '1';
-    }, 350);
-  }
-
-  emojiEl.style.transition   = 'opacity 0.35s ease';
-  captionEl.style.transition = 'opacity 0.35s ease';
-
-  setInterval(cycleMoment, 3500);
-})();
+/* moment content is static (coffee photo + fixed caption) — no cycling needed */
 
 
 /* ═══════════════════════════════════════════

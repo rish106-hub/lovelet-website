@@ -791,17 +791,18 @@ body {
 .moment-bg {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 45%, #4F46E5 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(135deg, #3B2314 0%, #1A0F0A 100%);
   position: relative;
+  overflow: hidden;
 }
 
-.moment-emoji-layer {
-  font-size: 60px;
-  opacity: 0.85;
-  animation: float-bob 3s ease-in-out infinite;
+.moment-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .moment-overlay {
@@ -906,11 +907,15 @@ body {
   height: 28px;
   background: linear-gradient(135deg, var(--purple-mid), var(--purple));
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
+  overflow: hidden;
   flex-shrink: 0;
+}
+
+.widget-thumb-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .widget-copy { flex: 1; min-width: 0; }
@@ -1187,6 +1192,36 @@ body {
 .feat-large .feat-text { font-size: 15px; max-width: 400px; }
 .feat-sm    .feat-text { font-size: 13.5px; }
 
+/* Caption chip overlay — mimics in-app caption */
+.feat-caption-chip {
+  display: inline-flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-top: 16px;
+  max-width: 240px;
+}
+
+.fcc-from {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 4px;
+}
+
+.fcc-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.4;
+}
+
 /* Circle arrow button on large panel */
 .feat-connector-arrow {
   position: absolute;
@@ -1338,8 +1373,8 @@ body {
 .bento-card:nth-child(2) { grid-column: 2; grid-row: 1 / 3; } /* Ill Purple (tall) */
 .bento-card:nth-child(3) { grid-column: 3; grid-row: 1 / 3; } /* Stat (tall) */
 .bento-card:nth-child(4) { grid-column: 1; grid-row: 2; }   /* Quote B */
-.bento-card:nth-child(5) { grid-column: 1 / 3; grid-row: 3; } /* Features (wide) */
-.bento-card:nth-child(6) { grid-column: 3; grid-row: 3; }   /* Ill Amber */
+.bento-card:nth-child(5) { grid-column: 1; grid-row: 3; }     /* Features */
+.bento-card:nth-child(6) { grid-column: 2 / 4; grid-row: 3; } /* Photo (wide) */
 .bento-card:nth-child(7) { grid-column: 1 / 4; grid-row: 4; } /* Highlight (full width) */
 
 .bento-card {
@@ -1517,12 +1552,12 @@ body {
   border: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .stat-number {
   font-family: 'Syne', sans-serif;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 800;
   color: var(--cream);
   line-height: 1;
@@ -1533,17 +1568,84 @@ body {
 
 .stat-label {
   font-family: 'Syne', sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--purple-mid);
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .stat-desc {
-  font-size: 13.5px;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 1.6;
   color: rgba(249,245,238,0.45);
+  margin-bottom: 0;
+}
+
+.stat-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(249,245,238,0.06);
+  border: 1px solid rgba(249,245,238,0.1);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 18px;
+  margin-bottom: 14px;
+}
+
+.stp-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgba(109,40,217,0.3);
+}
+
+.stp-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.stp-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stp-name {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(249,245,238,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.stp-msg {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(249,245,238,0.9);
+}
+
+.stat-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.stat-pill {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--purple-mid);
+  background: rgba(109,40,217,0.15);
+  border: 1px solid rgba(109,40,217,0.25);
+  border-radius: 20px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 /* Feature list card */
@@ -1565,8 +1667,8 @@ body {
 .feature-list {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 30px;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
 .feature-list li {
